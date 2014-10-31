@@ -18,3 +18,11 @@
 @since 		July 6, 2004
 
 This Software makes use of CodeIgniter web framework, HtmlArea textarea solution and PHPmailer.
+
+Installation:
+- copy all files to your Web server root
+- modify application/config/database.php file to your MySQL database credentials
+- create new MySQL database in your phpmyadmin interface, import install.sql script into the new database
+- make application/cache and application/uploads folders writable
+- open web browser to your web address, click on New User and fill the From correctly
+- login with your new credentials in Login page
