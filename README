@@ -1,0 +1,20 @@
+////////////////////////
+//      pEAS v3.0     //
+// by Kristaps Ledins //
+// ------------------ //
+// twitter.com/krysits//
+// github.com/krysits //
+// krysits@gmail.com  //
+// ------------------ //
+//(c)2014 krysits.COM //
+////////////////////////
+
+@name		pEAS3
+@description pEAS3 is multi-user web application, designed for sending out emails to lists
+@author		Kristaps Ledins <krysits@gmail.com>, <twitter.com/krysits>, <github.com/krysits>
+@url		http://krysits.com/peas/
+@license	See LICENSE and license-codeigniter files
+@version 	3.0
+@since 		July 6, 2004
+
+This Software makes use of CodeIgniter web framework, HtmlArea textarea solution and PHPmailer.
