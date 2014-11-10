@@ -117,6 +117,7 @@ class Emails extends CI_Controller {
 		if ( ! $this->upload->do_upload('userfile'))
 		{
 			$error = array('error' => $this->upload->display_errors());
+			$error['title'] = "Upload Failed";
 			//var_dump($error);exit();
 			$this->load->template('upload_form', $error);
 		}
