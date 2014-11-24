@@ -1,1 +1,0 @@
-a:3:{s:3:"url";s:17:"http://nobody.lv/";s:8:"feed_url";s:20:"http://nobody.lv/rss";s:5:"build";s:14:"20121030175403";}

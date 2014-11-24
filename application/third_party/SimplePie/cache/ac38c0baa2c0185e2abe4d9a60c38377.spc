@@ -1,1 +1,0 @@
-a:3:{s:3:"url";s:19:"http://senteevs.lv/";s:8:"feed_url";s:24:"http://senteevs.lv/feed/";s:5:"build";s:14:"20121030175403";}
