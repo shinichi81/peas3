@@ -116,6 +116,24 @@ CREATE TABLE IF NOT EXISTS `peas3_users` (
   UNIQUE KEY `email` (`email`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `peas3_feeds`
+--
+
+CREATE TABLE IF NOT EXISTS `peas3_feeds` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `url` varchar(255) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `ctime` int(11) NOT NULL,
+  `status` tinyint(1) NOT NULL DEFAULT '0',
+  `user_id` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `noDuplicationPerUser` (`url`,`user_id`),
+  KEY `url` (`url`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='RSS Feeds' AUTO_INCREMENT=1 ;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

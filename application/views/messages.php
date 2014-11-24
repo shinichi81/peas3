@@ -39,7 +39,7 @@ if(!empty($lists))
 }
 ?>
 </div>
-Subject: <input type="text" name="subject" placeholder="Subject" value=""/>
+Subject: <input type="text" name="subject" placeholder="Subject" value="<?php if(isset($setMsgTitle)){ echo $setMsgTitle;}?>"/>
 <textarea id="ta" name="ta" rows="20" cols="80" style="width: 100%"></textarea>
 <input type="hidden" name="msg" id="msg" value=""/>
 <br/><input type="button" onclick="javascript:mySubmit()" value="Send Message"/> <input type="reset" value="Reset"/>
@@ -52,4 +52,5 @@ function mySubmit() {
 	document.edit.onsubmit();
 	document.edit.submit();
 };
+<?php if(isset($setHTML)){ echo 'document.getElementById("ta").innerHTML = \'' . $setHTML . '\';'; }?>
 </script>

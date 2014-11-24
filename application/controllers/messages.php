@@ -23,7 +23,7 @@ class Messages extends CI_Controller {
 	public function index()
 	{
 		if($this->session->userdata('logged_in') != "")
-		{	//var_dump($_REQUEST);exit();
+		{
 			$session_data = $this->session->userdata('logged_in');
 			$data['username'] = $session_data['username'];
 			$this->_userId = $session_data['id'];
@@ -45,7 +45,11 @@ class Messages extends CI_Controller {
 				$data['lists'] = $user_lists;
 			}
 			
-			//$this->_welcome();
+			if(isset($_REQUEST['html']))
+			{
+				$data['setHTML'] = trim($_REQUEST['html']);
+				$data['setMsgTitle'] = trim($_REQUEST['msgTitle']);
+			}
 			
 			$this->load->model('menu_list');
 			$data['menu'] = $this->menu_list->get_top_menu();

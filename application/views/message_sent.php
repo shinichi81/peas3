@@ -10,5 +10,4 @@
 //(c)2014 krysits.COM //
 ////////////////////////
 ?>
-<p>Msg Successfully sent.</p>
 <br/><?php if(isset($sent)){ echo $sent;}?>

@@ -18,6 +18,8 @@ class Menu_list extends CI_Model
 			'/lists' => 'Lists',
 			'/emails' =>'Emails',
 			'/crawl' =>'Crawl',
+			'/feeds' =>'Feeds',
+			'/content' =>'Content',
 			'/messages' => 'Messages',
 			
 			'/logout' => 'Logout[x]',
