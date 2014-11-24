@@ -43,16 +43,16 @@ class Msg_manager extends CI_Model
 		$user_email = $sess_array['email'];
 		// mailer part
 		$mail = new PHPMailer();
-		$mail->CharSet = 'UTF-8';
+		$mail->CharSet = 'UTF-8';//$mail->SMTPDebug  = 1;
         $mail->IsSMTP(); // we are going to use SMTP
         $mail->SMTPAuth   = false; // enabled SMTP authentication
         //$mail->SMTPSecure = "ssl";  // prefix for secure protocol to connect to the server
-        $mail->Host       = "mx2.bkc.lv";      // setting GMail as our SMTP server
-        $mail->Port       = 25;                   // SMTP port to connect to GMail
-        //$mail->Username   = "krysits@gmail.com";  // user email address
-        //$mail->Password   = "password";            // password in GMail
-        $mail->SetFrom($user_email, $user_name);  //Who is sending the email
-        $mail->AddReplyTo($user_email, $user_name);  //email address that receives the response
+        $mail->Host       = "localhost";// setting GMail as our SMTP server
+        $mail->Port       = 25;// SMTP port to connect to GMail
+        //$mail->Username   = "krysits@gmail.com";// user email address
+        //$mail->Password   = "password";// password in GMail
+        $mail->SetFrom($user_email, $user_name);//Who is sending the email
+        $mail->AddReplyTo($user_email, $user_name);//email address that receives the response
 		// msg body
 		$mail->Subject = $subject;
         $mail->Body = $htmlBody;
