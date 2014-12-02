@@ -13,7 +13,7 @@ class country_code
 {
 	public $ip = '';
 	public $country_code = 'XX';
-	private $_ip_url = "http://api.hostip.info/get_json.php?ip=";
+	private $_ip_url = "http://ipinfo.io/";
 	
 	public function __construct($ip = Null)
 	{
@@ -31,9 +31,9 @@ class country_code
 	}
 	
 	private function _geo_loc_code($ip){
-		$url = $this->_ip_url . $ip;
+		$url = $this->_ip_url . $ip . '/json';
 		$data = file_get_contents($url);
 		$json_data = json_decode($data);
-		return $json_data->country_code;
+		return $json_data->country;
 	}
 };
